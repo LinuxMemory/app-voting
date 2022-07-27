@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: kodekloud-result
+    labels:
+        name: kodekloud-result
+        app: voting-app
+spec:
+    containers:
+        - name: kodekloud-result
+          image: dockersamples/result

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: service-for-redis
+    labels:
+        name: service-for-redis
+        app: voting-app
+spec:
+    type: ClusterIP
+    ports: 
+        - port: 6379
+          targetPort: 6379
+    selector:
+        app: voting-app

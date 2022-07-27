@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: service-for-postgres
+    labels:
+        name: service-for-postgres
+        app: voting-app
+spec:
+    type: ClusterIP
+    ports: 
+        - port: 5432
+          targetPort: 5432
+    selector:
+        name: db
+        app: voting-app
